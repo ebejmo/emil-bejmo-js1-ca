@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contact Jingle Bell Movies" />
+    <title>Contact | Jingle Bell Movies</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/loader.css" />
+    <link rel="icon" href="data:;base64,=" />
+  </head>
+  <body>
+    <header id="top">
+      <div class="logo">
+        <a href="index.html" class="logo">Jingle Bell Movies</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html">Contact JBM</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="loader">
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    <main class="container">
+      <div class="head-movies">
+        <h1>Send us a message</h1>
+      </div>
+      <div class="form-success"></div>
+      <form id="contactForm">
+        <div>
+          <label>
+            Full Name (required)
+            <input name="fullName" class="fullName" />
+          </label>
+          <div class="form-error fullName-error" id="fullNameError">
+            Please enter your first name
+          </div>
+        </div>
+
+        <div>
+          <label>
+            Address
+            <input name="address" class="address" />
+          </label>
+          <div class="form-error" id="addressError">
+            Please enter your address. Minimum of 25 characters.
+          </div>
+        </div>
+
+        <div>
+          <label>
+            Subject
+            <input name="subject" class="subject" />
+          </label>
+          <div class="form-error" id="subjectError">
+            Please enter your subject. Minimum of 10 characters.
+          </div>
+        </div>
+
+        <div>
+          <label>
+            Email
+            <input name="email" class="email" placeholder="user@email.no" />
+          </label>
+          <div class="form-error" id="emailError">
+            Please enter a valid email address
+          </div>
+        </div>
+
+        <button>Send</button>
+      </form>
+    </main>
+    <script src="js/contact.js" type="module"></script>
+  </body>
+</html>
