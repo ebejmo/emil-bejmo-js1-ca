@@ -12,7 +12,7 @@ const email = document.querySelector(".email");
 const emailError = document.querySelector("#emailError");
 const successMessage = document.querySelector(".form-success");
 
-function formValidation() {
+function formValidation(event) {
   event.preventDefault();
 
   if (minLength(fullName.value, 0)) {
@@ -38,16 +38,20 @@ function formValidation() {
   } else {
     emailError.style.display = "block";
   }
-
-  if (
-    minLength(fullName.value, 0) &&
-    minLength(address.value, 24) &&
-    minLength(subject.value, 9) &&
-    emailValidation(email.value)
-  ) {
-    successMessage.innerHTML = `<div class="success">Your message was submitted!</div>`;
-    successMessage.style.display = "block";
+  function submitForm() {
+    if (
+      minLength(fullName.value, 0) &&
+      minLength(address.value, 24) &&
+      minLength(subject.value, 9) &&
+      emailValidation(email.value)
+    ) {
+      successMessage.innerHTML = `<div class="success">Your message was submitted!</div>`;
+      successMessage.style.display = "block";
+    } else {
+      successMessage.innerHTML = "";
+    }
   }
+  submitForm();
   form.reset();
 }
 
