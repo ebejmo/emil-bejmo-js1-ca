@@ -1,4 +1,5 @@
 import { displayMovies } from "./displayMovies.js";
+import { displayError } from "./errorMessage.js";
 
 export function searchMovies(movies) {
   const searchBar = document.querySelector(".search-bar");

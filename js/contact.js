@@ -47,12 +47,12 @@ function formValidation(event) {
     ) {
       successMessage.innerHTML = `<div class="success">Your message was submitted!</div>`;
       successMessage.style.display = "block";
+      form.reset();
     } else {
       successMessage.innerHTML = "";
     }
   }
   submitForm();
-  form.reset();
 }
 
 form.addEventListener("submit", formValidation);

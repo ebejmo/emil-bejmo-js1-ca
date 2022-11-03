@@ -17,7 +17,7 @@ async function getMovie() {
     createMovie(details);
   } catch (error) {
     console.log(error);
-    displayError("error", ".container");
+    displayError("error", error, ".container");
   }
 }
 

@@ -1,5 +1,5 @@
-export function displayError(messageType, target) {
+export function displayError(messageType, message, target) {
   const element = document.querySelector(target);
 
-  element.innerHTML = `<div class="${messageType}">"Hohoho, hold your raindeers. Looks like there has been a error."</div>`;
+  element.innerHTML = `<div class="${messageType}">${message}</div>`;
 }
