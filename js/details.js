@@ -1,6 +1,6 @@
-import { displayHtml } from "./ui/displayHtml.js";
-import { displayError } from "./ui/errorMessage.js";
-import { createMovie } from "./ui/movie.js";
+import { displayHtml } from "./functions/displayHtml.js";
+import { displayError } from "./functions/errorMessage.js";
+import { createMovie } from "./functions/movie.js";
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -13,7 +13,6 @@ async function getMovie() {
     const response = await fetch(url);
     const details = await response.json();
 
-    console.log(details);
     createMovie(details);
   } catch (error) {
     console.log(error);

@@ -1,9 +1,9 @@
-import { displayMovies } from "./ui/displayMovies.js";
-import { searchMovies } from "./ui/searchMovies.js";
-import { displayHtml } from "./ui/displayHtml.js";
-import { displayError } from "./ui/errorMessage.js";
+import { displayMovies } from "./functions/displayMovies.js";
+import { searchMovies } from "./functions/searchMovies.js";
+import { displayHtml } from "./functions/displayHtml.js";
+import { displayError } from "./functions/errorMessage.js";
 
-const url = "http://www.omdbapi.com/?s=Christmas&type=movie&apikey=2370680ce";
+const url = "http://www.omdbapi.com/?s=Christmas&type=movie&apikey=2370680c";
 
 async function getMovies() {
   try {
@@ -15,7 +15,7 @@ async function getMovies() {
     searchMovies(movies);
   } catch (error) {
     console.log(error);
-    displayError("error", "an error bajs", ".container");
+    displayError("error", error, ".container");
   }
 }
 

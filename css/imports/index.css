@@ -1,0 +1,52 @@
+.head-movies {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.search-bar {
+  margin: 1rem;
+  padding: 4px 12px;
+  width: 50%;
+}
+
+.movies {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.movie {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  max-width: 250px;
+  margin: 20px;
+  border: 2px solid white;
+}
+
+.details {
+  padding: 10px;
+  text-align: center;
+  min-height: 82px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title,
+.year {
+  color: white;
+}
+
+.year {
+  padding: 6px;
+  font-size: 12px;
+}
+
+.image {
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+}

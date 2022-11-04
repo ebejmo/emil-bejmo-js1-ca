@@ -1,4 +1,4 @@
-import { displayHtml } from "./ui/displayHtml.js";
+import { displayHtml } from "./functions/displayHtml.js";
 
 const form = document.querySelector("#contactForm");
 
@@ -55,8 +55,6 @@ function formValidation(event) {
   submitForm();
 }
 
-form.addEventListener("submit", formValidation);
-
 function minLength(value, len) {
   if (value.trim().length > len) {
     return true;
@@ -72,3 +70,4 @@ function emailValidation(email) {
 }
 
 setTimeout(displayHtml, 3000);
+form.addEventListener("submit", formValidation);
